@@ -1,8 +1,17 @@
+.reviews-section {
+  height: 80vh;
+  background-image: linear-gradient(to right, #0f0c29c9, #302b63a9, #24243e96),
+    url(../../../images/reviews/bg.jpg);
+  background-size: cover;
+  background-position: top;
+  color: azure;
+  margin-bottom: 20px;
+  padding: 20px;
+}
 .review-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-  background-image: linear-gradient();
 }
 
 @media only screen and (max-width: 572px) {

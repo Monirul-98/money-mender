@@ -1,8 +1,19 @@
-.card-image {
-  width: 200px;
-
+.review-card {
+  background-color: rgba(0, 0, 0, 0.459);
+  padding: 10px;
+  transform: skewX(-12deg);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.39);
+}
+.review-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   -webkit-shape-outside: circle(50% at 50% 50%);
   shape-outside: circle(50% at 50% 50%);
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
+  transform: skew(12deg);
+}
+.review-text {
+  transform: skewX(12deg);
 }
