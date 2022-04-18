@@ -11,18 +11,20 @@ const Banner = () => {
       <Carousel.Item interval={1000}>
         <img className="d-block w-100 image" src={banner1} alt="First slide" />
         <Carousel.Caption className="banner-title">
-          <h1>Financial Services</h1>
+          <h1>Expand What’s Possible With Money Through Financial Planning</h1>
           <p className="fs-5">
-            Develop innovative solutions for your financial problems.
+            Connect your money with what matters most. Experience a sense of
+            enough here and now, not just in the future.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
         <img className="d-block w-100 image" src={banner2} alt="Second slide" />
         <Carousel.Caption className="banner-title">
-          <h1>Financial Services</h1>
+          <h1>Grow Your Money</h1>
           <p className="fs-5">
-            Develop innovative solutions for your financial problems.
+            Get started, whether you're investing, doing taxes, or anything in
+            between.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -31,7 +33,8 @@ const Banner = () => {
         <Carousel.Caption className="banner-title">
           <h1>Financial Services</h1>
           <p className="fs-5">
-            Develop innovative solutions for your financial problems.
+            I am going to be your financial advisor takes care of the messy
+            details so you don't have to.
           </p>
         </Carousel.Caption>
       </Carousel.Item>

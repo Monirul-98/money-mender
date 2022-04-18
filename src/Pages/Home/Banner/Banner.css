@@ -5,6 +5,8 @@
 }
 
 .banner-title {
-  color: black;
   bottom: 60px;
+}
+.banner-title h1 {
+  font-size: 50px;
 }
