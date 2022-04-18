@@ -2,7 +2,7 @@ import React from "react";
 import "./Review.css";
 
 const Review = ({ review }) => {
-  const { name, img, description } = review;
+  const { name, img, description, rating } = review;
   return (
     <div className="d-flex review-card">
       <div className="image-container pe-3">

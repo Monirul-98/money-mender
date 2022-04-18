@@ -11,21 +11,24 @@ const reviews = [
     name: "Andy Smith",
     img: person1,
     description:
-      "His customer support was amazing.His help was quick and gave me instruction to follow",
+      "His customer support was amazing.His help was quick and gave me instruction to follow.",
+    rating: 5,
   },
   {
     id: 2,
     name: "Jack Lee",
     img: person2,
     description:
-      "His customer support was amazing.His help was quick and gave me instruction to follow",
+      "By using his consultation i have got the best tax management.He is top class.",
+    rating: 4.7,
   },
   {
     id: 3,
     name: "Abdul Samad",
     img: person3,
     description:
-      "His customer support was amazing.His help was quick and gave me instruction to follow",
+      "I was tensed how i would manage my properties and bank accounts after i retire.But He helped me through all of this.He is one of the best in business.",
+    rating: 5,
   },
 ];
 
