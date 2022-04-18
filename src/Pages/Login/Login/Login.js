@@ -73,13 +73,12 @@ const Login = () => {
         </p>
         <p className="mt-4">
           Forget Password?{" "}
-          <Link
-            className="text-danger text-decoration-none"
-            to="/login"
+          <button
+            className="btn btn-link text-danger text-decoration-none"
             onClick={handleResetPassword}
           >
             Reset Password
-          </Link>
+          </button>
         </p>
       </Form>
       <SocialLogIn></SocialLogIn>
