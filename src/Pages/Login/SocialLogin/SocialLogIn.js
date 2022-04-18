@@ -20,7 +20,7 @@ const SocialLogIn = () => {
         <p className="mt-3 p-3">or</p>
         <div style={{ height: "1px" }} className="w-50 bg-dark "></div>
       </div>
-      <p className="text-danger fs-4">Error: {error ? error.message : " "}</p>
+      {error ? <p className="text-danger fs-4">Error: {error.message}</p> : " "}
       <div>
         <button
           className="btn btn-dark w-50 mx-auto d-block my-3"

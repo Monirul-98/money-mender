@@ -3,10 +3,11 @@ import { Form, Button } from "react-bootstrap";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
+import SocialLogIn from "../SocialLogin/SocialLogIn";
 
 const Registration = () => {
-  const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, error] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const emailRef = useRef("");
   const passwordRef = useRef("");
 
@@ -18,7 +19,7 @@ const Registration = () => {
     createUserWithEmailAndPassword(email, password);
   };
   return (
-    <div className="my-5">
+    <div className="my-5 w-50 mx-auto">
       {user ? (
         <div className="text-center fs-2 text-info">
           Registration Successful!
@@ -27,7 +28,7 @@ const Registration = () => {
         <p className="text-center fs-2 text-danger">{error}</p>
       )}
       <h2 className="text-center">Please Register!</h2>
-      <Form className="w-50 mx-auto" onSubmit={handleRegister}>
+      <Form onSubmit={handleRegister}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Your name</Form.Label>
           <Form.Control type="text" placeholder="Username" />
@@ -60,6 +61,7 @@ const Registration = () => {
           </Link>
         </p>
       </Form>
+      <SocialLogIn></SocialLogIn>
     </div>
   );
 };

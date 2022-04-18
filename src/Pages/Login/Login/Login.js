@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import SocialLogIn from "../SocialLogin/SocialLogIn";
@@ -15,6 +18,7 @@ const Login = () => {
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
   if (user) {
     navigate(from, { replace: true });
@@ -25,6 +29,15 @@ const Login = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
+  };
+  const handleResetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      alert("Sent email");
+    } else {
+      alert("Please enter you email!");
+    }
   };
   return (
     <div className="my-5 w-50 mx-auto">
@@ -56,6 +69,16 @@ const Login = () => {
           New in Money Mender?{" "}
           <Link className="text-info text-decoration-none" to="/register">
             Register here.
+          </Link>
+        </p>
+        <p className="mt-4">
+          Forget Password?{" "}
+          <Link
+            className="text-danger text-decoration-none"
+            to="/login"
+            onClick={handleResetPassword}
+          >
+            Reset Password
           </Link>
         </p>
       </Form>
